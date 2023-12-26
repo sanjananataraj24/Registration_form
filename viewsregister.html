@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Registration Form</title>
+</head>
+
+<body>
+      <style>
+            body {
+  font-family: Arial, sans-serif;	
+  background-color: #f4f4f4;
+}
+ 
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 20px 7px 5px #8D9093;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+</style>
+  <div class="container">
+    <h1>Student Registration Form</h1>
+    <h4><b>Note:<br>-Please don't apply many times,or your application will be considered as invalid </b></h4>
+    <h5 style="color:red;"> * Indicates required</h5>
+    <h5>______________________________________________________</h5>
+    <form action="/register" method="post" id="registrationForm">
+
+      <label for="name"><b>Name *</b></label>
+      <input type="name" id="name" name="name" required>
+	<br>
+
+      <label for="gender"><b>Gender *</b>
+      <input type="radio" id="Male" name="gender" value="Male" required>Male
+      <input type="radio" id="Female" name="gender" value="Female" required>Female
+      <input type="radio" id="other" name="gender" value="Other" required>Other</label>
+	<br>
+
+      <label for="tel"><b>Phone Number *</b></label>
+      <input type="tel" id="tel" name="tel" required>
+	<br>
+
+      <label for="email"><b>Email *</b></label>
+      <input type="email" id="email" name="email" required>
+
+	<ul><b>Instructions</b>
+	<li>Password must contain 8 characters<br></li>
+	<li>Password must contain one capital letter<br></li>
+	<li>Password must contain atleast one number<br></li>
+	<li>Password must contain one special character<br></li>
+	</ul>
+      <label for="password"><b>Password *</b></label>
+      <input type="password" id="password" name="password" required>
+	<br>
+
+      <label for="college"><b>College Name *</b></label>
+      <input type="text" id="college" name="college" required>
+	<br>
+
+      <label for="course"><b>Course *</b></label>
+      <select  type="text" name="course" size="1"  id='course' required>
+	<option value="select">select...</option>
+	<option value="BE">BE</option>
+  	<option value="B Tech">B Tech</option>
+  	<option value="BCA">BCA</option>
+  	<option value="BSC">BSC</option>
+  	<option value="Diploma">Diploma</option>
+	</select>
+	<br>
+
+      <label for="dept"><b>Department *</b></label>
+      <input type="text" id="dept" name="dept" required>
+	<br>
+
+      <label for="domain"><b>Interested Domain *</b><br>
+      <input type="radio" id="Cyber Security" name="domain" value="Cyber Security" required>Cyber Security<br>
+      <input type="radio" id="AIML" name="domain" value="AIML" required>AI&ML<br>
+      <input type="radio" id="Full Stack Web Development" name="domain" value="Full stack web development" required>Full Stack Web Development<br>
+      <input type="radio" id="Cloud Computing" name="domain" value="Cloud computing" required>Cloud Computing<br>
+      <input type="radio" id="data Analytics" name="domain" value="data analytics" required>Data Analytics<br></label>
+	<br>
+	<br>
+      <!-- <button type = "button" onclick="alert('Registration Successful')">Submit</button> -->
+
+      
+      <button type="button" onclick="submitForm()">Submit</button>
+      <br>
+      <button type="reset">Fill again</button>
+</form>
+
+<script>
+  function submitForm() {
+    
+    document.getElementById('registrationForm').submit();
+  }
+</script>
+
+  </div>
+</body>
+</html>
